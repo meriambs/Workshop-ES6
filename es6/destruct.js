@@ -1,6 +1,6 @@
-// -1-Spread Operator
-// The spread operator allows an iterable to spread or expand individually inside a receiver.
-//  Iterables are anything that can be looped over such as strings, arrays.
+// -1-Opérateur de propagation
+// L'opérateur de propagation permet à un itérable de se propager ou de se développer individuellement à l'intérieur d'un récepteur.
+// Les itérables sont tout ce qui peut être bouclé, comme des chaînes, des tableaux.
 
  const code1 = 'CODEBURST'; // Line 1
  const caracteres = [ ...code1 ]; // Line 2
@@ -9,7 +9,8 @@
  const splitt=code1.split('')
  console.log(splitt)
 
-//we will have the same  [ 'C', 'O', 'D', 'E', 'B', 'U', 'R', 'S', 'T' ]
+//on aura le même [ 'C', 'O', 'D', 'E', 'B', 'U', 'R', 'S', 'T' ]
+
 
 const items = [1,58,96,58];
 const item = [1,58,96,58];
@@ -29,9 +30,8 @@ const newObj = { ...obj }
 const newOb = { ...obj,...obj1,...obj2 }
 
 console.log('newObj',newObj,obj,newOb)
-//for the newobj  { name: 'Foo', age: 22 }
-//for newOb {name: 'Foo', age: 22, firstName: 'Foo', lastName: 'Bar', gender: 'M'} the age:22 they will add just one not the two of them 
-
+//pour le nouvelobj { nom : 'Foo', âge : 22 }
+//for newOb {name: 'Foo', age: 22, firstName: 'Foo', lastName: 'Bar', gender: 'M'} the age:22 ils ajouteront un seul pas les deux
 
 
 

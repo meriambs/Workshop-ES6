@@ -1,10 +1,10 @@
 
 //**************************************  var  ************************************
 
-//when you declare a variable using the var keyword, 
-//the scope of the variable is either global or local. 
-//If you declare a variable outside of a function, the scope of the variable is global.
-// When you declare a variable inside a function, the scope of the variable is local.
+//lorsque vous déclarez une variable à l'aide du mot-clé var,
+//la portée de la variable est soit globale soit locale.
+//Si vous déclarez une variable en dehors d'une fonction, la portée de la variable est globale.
+// Lorsque vous déclarez une variable dans une fonction, la portée de la variable est locale.
 
 if (true) {
     var t = 5;
@@ -13,8 +13,8 @@ if (true) {
    console.log(t); // 5
 
 // *************************************  Let  ************************************
-// let is similar to var but let has scope.
-//  let is only accessible in the block level it is defined.
+// let est similaire à var mais let a une portée.
+// let n'est accessible qu'au niveau du bloc où il est défini.
 
 if (true) {
     let a = 40;
@@ -24,9 +24,8 @@ if (true) {
 
 // *************************************  const  ************************************
 
-// Variables declared with the const maintain constant values. 
-// const declarations share some similarities with let declarations.
-
+// Les variables déclarées avec const conservent des valeurs constantes.
+// Les déclarations const partagent certaines similitudes avec les déclarations let.
 
 if (true) {
     const a = 40;
@@ -40,8 +39,8 @@ if (true) {
 
 
 //NOTE 
-// **********---  var variables can be re-declared and updated
-// This means that we can do this within the same scope and won't get an error.
+// **********---  les variables var peuvent être redéclarées et mises à jour
+// Cela signifie que nous pouvons le faire dans la même portée et n'obtiendrons pas d'erreur.
 
      var greeter = "hey hi";
      var greeter = "say Hello instead";
@@ -49,41 +48,37 @@ if (true) {
 
 
 
-// **********---   Hoisting of var
-// Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means that if we do this:
+// **********---   gosting du var
+// Le levage est un mécanisme JavaScript dans lequel les variables et les déclarations de fonctions sont déplacées vers le haut de leur portée avant l'exécution du code. Cela signifie que si nous faisons ceci :
 
      console.log (greeter);
      var greeter = "say hello"
-// it is interpreted as this:
+//il est interprété comme ceci :
 
 //     var greeter;
      console.log(greeter); // greeter is undefined
      greeter = "say hello"
-// So var variables are hoisted to the top of their scope and initialized with a value of undefined.
-//-----------> if you do that to let , you will have (Reference Error.)
-
-
-
-
+//Ainsi, les variables var sont hissées au sommet de leur portée et initialisées avec une valeur indéfinie.
+//-----------> si vous faites cela pour laisser , vous aurez (Erreur de référence.)
 
 //ici note for the let 
-// let can be updated but not re-declared.
-// Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. So while this will work:
-
+// 
+//let peut être mis à jour mais pas re-déclaré.
+// Tout comme var, une variable déclarée avec let peut être mise à jour dans sa portée. Contrairement à var, une variable let ne peut pas être redéclarée dans sa portée. Donc, pendant que cela fonctionnera :
      let greeting = "say Hi";
      greeting = "say Hello instead";
-// this will return an error:
-// ---> this part is commented so you wont find a probleme when you go to the console part 
-    //  let greeting = "say Hi";
-    //  let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+
+// cela renverra une erreur :
+// ---> cette partie est commentée afin que vous ne trouviez pas de problème lorsque vous accédez à la partie console
+    // let greeting = "dire bonjour" ;
+    // let greeting = "dire bonjour à la place" ; // erreur : l'identifiant 'greeting' a déjà été déclaré
 
 
 
+    // note constante :
 
-    //const note : 
-
-    // const object cannot be updated, the properties of this objects can be updated.
-    //  Therefore, if we declare a const object as this:
+    // l'objet const ne peut pas être mis à jour, les propriétés de ces objets peuvent être mises à jour.
+    // Par conséquent, si nous déclarons un objet const comme ceci :
     const greetingg = {
         message: "say Hi",
         times: 4
@@ -93,6 +88,6 @@ if (true) {
     greetingg = {
         words: "Hello",
         number: "five"
-    } // error:  Assignment to constant variable.
-    // but we can add like this : 
-    // greeting.message = "say Hello instead";
+    } // erreur : Affectation à variable constante.
+    // mais on peut ajouter comme ceci :
+    // salutation.message = "dites bonjour à la place" ;

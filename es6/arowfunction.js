@@ -1,7 +1,7 @@
 //***************************** arrow functions */
 
-// ES6 arrow functions provide you with an alternative
-//  way to write a shorter syntax compared to the function expression.
+//Les fonctions fléchées de l'ES6 vous offrent une alternative
+// façon d'écrire une syntaxe plus courte par rapport à l'expression de la fonction.
 
 
 function add(x, y) {
@@ -10,39 +10,44 @@ function add(x, y) {
   
   console.log(add(1, 2));
   
-//   The following example is equivalent to the above add()
-//    function expression but use an arrow function instead:  
+
+// L'exemple suivant est équivalent à l'add() ci-dessus
+// expression de fonction mais utilisez une fonction fléchée à la place :
+
   const add1 = (x, y) => {
     return x + y;
   };
 
-//   In this example, the arrow function has one expression x + y 
-// so it returns the result of the expression.
 
-// However, if you use the block syntax, you need to specify the return keyword:
+// Dans cet exemple, la fonction flèche a une expression x + y
+// il renvoie donc le résultat de l'expression.
+
+// Cependant, si vous utilisez la syntaxe de bloc, vous devez spécifier le mot-clé return :
 
 let add = (x, y) => { return x + y; };
 
 
 
 
-// If you use an expression in the body of an arrow function, you don’t need to use the curly braces.
+// Si vous utilisez une expression dans le corps d'une fonction fléchée, vous n'avez pas besoin d'utiliser les accolades.
 
-//   const add1 = (x, y) => x + y;
+// const add1 = (x, y) => x + y ;
   console.log(add1(1, 2));
 
 
 
 
 
-//  ---------------------- JavaScript arrow functions with no parameter
-// If the arrow function has no parameter, you need to use parentheses, like this:
+
+// ---------------------- Fonctions fléchées JavaScript sans paramètre
+// Si la fonction fléchée n'a pas de paramètre, vous devez utiliser des parenthèses, comme ceci :
 
 () => { statements }
 
-//-----------------------let's talk about the Line break
-// JavaScript doesn’t allow you to have a line break between
-//  the parameter definition and the arrow (=>) in an arrow function.
+
+//---------------------- Parlons du saut de ligne
+// JavaScript ne vous permet pas d'avoir un saut de ligne entre
+// la définition du paramètre et la flèche (=>) dans une fonction fléchée.
 
 // For example, the following code causes a SyntaxError:
 // -----------------remove the comment to understand
