@@ -33,6 +33,36 @@ console.log('newObj',newObj,obj,newOb)
 //pour le nouvelobj { nom : 'Foo', âge : 22 }
 //for newOb {name: 'Foo', age: 22, firstName: 'Foo', lastName: 'Bar', gender: 'M'} the age:22 ils ajouteront un seul pas les deux
 
+// NOTE
+// we create or have an object with default values and we want to create an other that have the same keys and values but change element in it 
+
+const defaultObject ={
+  name:"default name",
+  lastName:"default lastname",
+  age:"default age"
+}
+const users ={
+  ...defaultObject,
+  name:"meriam",
+  age:28
+
+}
+console.log(defaultObject),console.log(users)
+// console.log---> defaultObject{
+//   age:default age
+//   lastName:default lastname
+//   name:default name
+//   }
+// console.log users -> { age:28,lastName:default lastname,name:meriam }
+
+
+
+
+
+
+
+
+
 
 
 //*********************Destructuring******************** */
